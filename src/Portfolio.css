@@ -1,0 +1,294 @@
+/* 전체 스타일 설정 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 공통 컨테이너 설정 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header 스타일 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 16px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #1d4ed8;
+}
+
+.toggle-btn {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  background-image: url('../resource/imgs/mypic.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  color: white;
+}
+
+.home-content p {
+  font-size: 20px;
+  color: #d1d5db;
+}
+
+/* Section 공통 스타일 */
+.section {
+  padding: 64px 0;
+}
+
+/* 카드 스타일 */
+.card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #002c74, #00277c);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f1f5f9;
+  padding: 32px;
+  text-align: center;
+}
+
+.footer .email,
+.footer .github-link {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.footer .github-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* 다크 모드 설정 */
+.dark {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark .header {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark .nav a {
+  color: #f1f5f9;
+}
+
+.dark .toggle-btn {
+  background-color: #2563eb;
+}
+
+.dark .card {
+  background-color: #475569;
+  color: #f1f5f9;
+}
+
+.dark .skill-card {
+  background: linear-gradient(135deg, #002c74, #00277c);
+}
+
+.dark .project-card {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark .footer {
+  background-color: #1e293b;
+}
+
+/* 페이지 로딩 시 fade-in 효과 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 슬라이드쇼 컨테이너 */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 슬라이드 애니메이션 */
+.slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark .slide-item {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+/* 중앙 정렬 화살표 버튼 */
+.center-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.center-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 16px;
+}
+
+.next-btn {
+  right: 16px;
+}
+
+/* 페이드인 애니메이션 */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
